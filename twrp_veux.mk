@@ -8,9 +8,9 @@ DEVICE_PATH := device/xiaomi/veux
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := veux
-PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
+PRODUCT_NAME := twrp_veux
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := $(PRODUCT_BRAND) Note 11 Pro 5G
+PRODUCT_MODEL := Redmi Note 11 Pro 5G
 PRODUCT_PLATFORM := holi
 PRODUCT_MANUFACTURER := xiaomi
 
