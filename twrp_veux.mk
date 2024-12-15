@@ -6,14 +6,6 @@
 # Device Path
 DEVICE_PATH := device/xiaomi/veux
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := veux
-PRODUCT_NAME := twrp_veux
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Note 11 Pro 5G
-PRODUCT_PLATFORM := holi
-PRODUCT_MANUFACTURER := xiaomi
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -33,3 +25,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Apex
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := veux
+PRODUCT_NAME := twrp_veux
+PRODUCT_BRAND := xiaomi
+PRODUCT_MODEL := Redmi Note 11 Pro 5G
+PRODUCT_PLATFORM := holi
+PRODUCT_MANUFACTURER := xiaomi
