@@ -39,6 +39,7 @@ jobs:
       fail-fast: false
       matrix:
         name: [TWRP, OrangeFox, PBRP]
+        target: [boot, vendorboot]
     env:
       BRANCH_NAME: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.branch || github.ref_name }}
       UPLOAD_RELEASES: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.upload_releases || 'false' }}
@@ -58,7 +59,7 @@ jobs:
       - name: Generate Build Info
         id: build_info
         run: |
-          echo "BUILD_DATE=$(date +'%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_ENV
+          echo "BUILD_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Build TWRP
         if: matrix.name == 'TWRP'
@@ -121,7 +122,7 @@ jobs:
             ### 📊 Checksums
             ```
             Image (IMG): ${{ env.MD5_IMG }}
-            Ramdisk: ${{ env.MD5_ZIP }}
+            Zip (if present): ${{ env.MD5_ZIP }}
             ```
             
             ### ⚠️ Notes
