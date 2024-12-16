@@ -39,7 +39,7 @@ jobs:
       fail-fast: false
       matrix:
         name: [TWRP, OrangeFox, PBRP]
-        target: [boot, vendorboot]
+        target: [vendorboot]
     env:
       BRANCH_NAME: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.branch || github.ref_name }}
       UPLOAD_RELEASES: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.upload_releases || 'false' }}
